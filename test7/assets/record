@@ -1,0 +1,4 @@
+1.
+docker run -d --name rabbitmq-test -p 55555:55555 -p 55554:55554 rabbitmq:test
+
+docker: Error response from daemon: oci runtime error: container_linux.go:247: starting container process caused "exec: \"entrypoint.sh\": executable file not found in $PATH".

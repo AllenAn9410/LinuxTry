@@ -1,0 +1,7 @@
+========================= allen  information =========================
+name:allen
+age:23
+height:176
+weight:66
+stature suggest:You build great
+Constellation:天秤座

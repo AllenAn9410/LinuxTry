@@ -1,14 +1,10 @@
 #!/bin/bash
-eatfile="./eat"
-thisfile="./this"
-if [ ! -f '$thisfile' ];then
-  touch this;
-fi
-if [ ! -f '$eatfile' ]; then
-  echo "no file" 
-fi
-echo "random you lunch:" > $thisfile
-a=(`awk '{print $0}' $eatfile`)
+eat_file="./eat"
+choose_file="./this"
+
+echo "random you lunch:" > $choose_file
+a=(`awk '{print $0}' $eat_file`)
 rand=$[ $RANDOM % ${#a[@]} ]
 rand_eat=${a[$rand]} 
-echo $rand_eat >> $thisfile
+echo $rand_eat >> $choose_file
+echo "ok..."

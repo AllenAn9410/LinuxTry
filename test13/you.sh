@@ -245,3 +245,4 @@ input_height
 input_weight
 output
 echo "you can open ${dir} the file in $(pwd)"
+sleep 15

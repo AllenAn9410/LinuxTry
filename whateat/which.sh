@@ -35,4 +35,5 @@
   echo "ok..."
   echo $num1 >> $show_file
   cat $show_file
+  sleep 5
   

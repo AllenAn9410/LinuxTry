@@ -158,7 +158,7 @@ function validate_Constellation(){
   arr_day=(20 19 21 21 21 22 23 23 23 23 22 22)
   month_double=`expr ${month} \* 2 `
   arr_index=`expr ${month} - 1`
-  if [ ${arr_day[${arr_index}]} -gt $day ];then
+  if [ ${arr_day[${arr_index}]} -gt ${day} ];then
     index=`expr ${month_double} - 2`
     #echo ${arr_col:${index}:2}
     Constellation=${arr_col:${index}:2}

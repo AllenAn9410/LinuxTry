@@ -36,10 +36,12 @@ function backup(){
     # $2 jar
     # $3 class
     # com/cs/core/rest/RestClientAPI.class
-    logs "Decompress ${2} and backup to folder ${updateFileName}/${1}/backup" > "${updateFileName}/${1}/${1}.log"
-    jar -xvf ${updateFileName}/$1/${2} -f ${3}
-    mv "com" ${updateFileName}/${1}/backup/${2}
+    logs "BK ${1} ${2} --> ${updateFileName}/${dateName}/backup" >> "${updateFileName}/${dateName}/${dateName}.log"
+    jar -xvf ${updateFileName}/${dateName}/${1} -f ${2}
+    # rsync
+    cp -r "com" ${updateFileName}/${dateName}/backup/${1}
+    rm -rf "com"
 }
 
 checkFile
-backup "20180816" CSEECore.jar "com/cs/core/rest/RestClientAPI.class"
+backup CSEECore.jar "com/cs/core/rest/RestClientAPI.class"
